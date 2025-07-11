@@ -30,7 +30,7 @@ def main():
         sys.exit("No audio files in " + args.indir)
 
     # small-int8 model → runs on CPU, no HF token, no diarisation
-    model = whisperx.load_model("small", device="cpu", compute_type="int8", diarize=False)
+    model = whisperx.load_model("small", device="cpu", compute_type="int8")
 
     rows = []
     for wav in wavs:
